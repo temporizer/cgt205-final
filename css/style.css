@@ -164,7 +164,7 @@ header #head #logo .logo2 {
 }
 #wrapper h1 {
   font-size: 1.6em;
-  font-family: "Kameron", serif;
+  font-family: "Nothing You Could Do", cursive;
   padding: 10px;
   color: #a1cc14;
   background: black;
@@ -186,24 +186,19 @@ header #head #logo .logo2 {
   text-align: center;
 }
 #wrapper .images img {
-  margin: 20px auto;
-  display: block;
+  margin: 0px auto;
+  display: inline-block;
   height: 128px;
   width: 128px;
-  background: #a1cc14;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  border-radius: 25px;
 }
 #wrapper .images img.me {
   width: 200px;
   height: 200px;
   padding-bottom: 0px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
-  -ms-border-radius: 75px;
-  border-radius: 75px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
   display: none;
 }
 
@@ -300,10 +295,6 @@ html, body {
     -moz-border-bottom-right-radius: 7px;
     -ms-border-bottom-right-radius: 7px;
   }
-
-  #wrapper .images img {
-    display: inline-block;
-  }
 }
 @media (min-width: 850px) {
   #wrapper .clear {
@@ -325,5 +316,9 @@ html, body {
   }
   #wrapper .images img.me {
     display: inline-block;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
   }
 }

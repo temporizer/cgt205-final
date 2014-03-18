@@ -1,11 +1,11 @@
 <?php include "includes/header.inc.php"; ?>
 
-<section class="row images">
-	<img src="" alt="">
-	<img src="" alt="">
-	<img class="me" src="images/avatar.jpg" alt="">
-	<img src="" alt="">
-	<img src="" alt="">
+<section class="images">
+	<img src="images/html5.png" alt="">
+	<img src="images/css3.png" alt="">
+	<img class="me" src="images/photo.jpg" alt="">
+	<img src="images/php.png" alt="">
+	<img src="images/mysql.png" alt="">
 </section>
 <div class="clear"></div>
 <section class="row">

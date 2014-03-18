@@ -140,7 +140,7 @@ header {
 
 	h1 { 
 		font-size: 1.6em; 
-		font-family: $logo2; 
+		font-family: $logo1; 
 		padding: 10px; 
 		color: $green; 
 		background: $h1bg;
@@ -160,19 +160,20 @@ header {
 	.images {
 		// border: 1px solid black;
 		text-align: center;
+		// padding-bottom: 35px;
 		img {
-			margin: 20px auto;
-			display: block;
+			margin: 0px auto;
+			display: inline-block;
 			height: 128px;
 			width: 128px;
-			background: $green;
-			@include border-radius(25px);
+			// background: $green;
+			// @include border-radius(25px);
 		}
 		img.me {				
 			width: 200px;
 			height: 200px;
 			padding-bottom: 0px;
-			@include border-radius(75px);
+			@include border-radius(25px);
 			display: none;
 		}
 	}
@@ -262,7 +263,7 @@ footer {
 
 		.images {
 			img {
-				display: inline-block;
+				// display: inline-block;
 				// vertical-align: center;
 			}			
 		}
@@ -288,6 +289,7 @@ footer {
 
 			img.me {
 				display: inline-block;
+				@include box-shadow(3px, 3px, 3px, 0px, rgba(0,0,0,0.5));
 			}
 		}
 
