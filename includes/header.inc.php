@@ -29,9 +29,6 @@
 		</nav>
 
 		<div id="head">
-			<div id="img">
-				<img src="images/avatar.png" alt="">
-			</div>  <!-- end img div -->
 			<div id="logo">
 				<h1><a href="index.php"><span class="logo1">conklin</span><span class="logo2">media</span></a></h1>
 			</div>  <!-- end logo div -->

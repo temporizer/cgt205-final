@@ -12,9 +12,7 @@ body {
 	position: absolute;
 	top: 8px;
 	right: 12px;
-	// background-color: $iconBgColor;
 	padding: 5px;
-	// @include border-radius(3px);
 	cursor: pointer;
 
 	i {
@@ -57,17 +55,17 @@ header {
 				display: block;
 				text-decoration: none;
 				background-color: $bgLink;
-				color: $fgLink;
+				color: $linkColor;
 				}
 
 				a:hover {
 					color: $fgLink_hover;
-					background: $bgLink_hover;
+					background: $linkColor;
 				}
 
 				a.active {
 					color: $fgActive;
-					background: $bgActive;
+					background: $linkColor;
 					cursor: default;
 
 				}
@@ -76,14 +74,6 @@ header {
 	}
 
 	#head {
-
-		#img {
-			display: none;
-
-			img {
-				
-			}
-		}
 
 		#logo {
 			// position: absolute;
@@ -136,7 +126,7 @@ header {
 
 #wrapper {
 	max-width: 1200px;
-	margin: 17px auto 0 auto;
+	margin: 17px auto 15px auto;
 	padding: 0 8px;
 
 	h1, h2, h3, h4, h5, h6 { 
@@ -148,17 +138,51 @@ header {
 		margin-bottom: 25px;
 	}
 
-	h1 { font-size: 1.6em; font-family: $logo2; padding: 10px; color: $h1fg; background: $h1bg}
+	h1 { 
+		font-size: 1.6em; 
+		font-family: $logo2; 
+		padding: 10px; 
+		color: $green; 
+		background: $h1bg;
+	}
+
 	h2 { font-size: 1.4em; }
 	h3 { font-size: 1.2em; }
+	
+	p {
+		padding: 0 8px;
+	}
+	p:first-letter {
+		font-size: 30px;
+		font-weight: 900;
+	}
+
+	.images {
+		// border: 1px solid black;
+		text-align: center;
+		img {
+			margin: 20px auto;
+			display: block;
+			height: 128px;
+			width: 128px;
+			background: $green;
+			@include border-radius(25px);
+		}
+		img.me {				
+			width: 200px;
+			height: 200px;
+			padding-bottom: 0px;
+			@include border-radius(75px);
+			display: none;
+		}
+	}
 
 
 }
 footer {
-	height: 100px;
+	height: 75px;
 	background: black;
 	width: 100%;
-	// margin-top: 12px;
 	// padding: 8px 0;
 	@include box-shadow(0px, -3px, 5px, 1px, rgba(0,0,0,0.2));
 
@@ -177,8 +201,8 @@ footer {
 				a {
 					text-decoration: none;
 					display: block;
-					color: $fgLink;
-					font-size: 64px;
+					color: $linkColor;
+					font-size: 28px;
 					// background: $bgLink;
 				}
 				a:hover {
@@ -191,16 +215,16 @@ footer {
 	.copy {
 		display: block;
 		color: white;
-		text-align: right;
+		text-align: center;
 		// padding: 5px;
 		font-size: .8em;
 	}
 }
 
 
-@include sticky-footer(100px, "#main", "#root_footer", "#footer");
+@include sticky-footer(75px, "#main", "#root_footer", "#footer");
 
-@media (min-width: 680px ) {
+@media (min-width: 600px ) {
 	.menu-icon {
 		display: none;
 	}
@@ -234,10 +258,19 @@ footer {
 			}
 		}
 	}
-}
+	#wrapper {
 
+		.images {
+			img {
+				display: inline-block;
+				// vertical-align: center;
+			}			
+		}
+	}
+}
 @media (min-width: 850px) {
 	#wrapper {
+		.clear{ clear: both; }
 		.row {
 			display: inline-block;
 			@include box-sizing(border-box);
@@ -247,6 +280,17 @@ footer {
 			margin: 0;
 
 		}
+		.images {
+			width: 100%;
+			img {
+
+			}
+
+			img.me {
+				display: inline-block;
+			}
+		}
+
 
 	}
 }

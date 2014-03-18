@@ -11,7 +11,7 @@
 				</ul>	
 		</div>
 		<div class="copy">
-			&copy; ConklinMedia.com 2014
+			<p>copyright &copy; 2014 conklinmedia.com</p>
 		</div>
 	</footer>
 	<script src="./js/jquery.js"></script>

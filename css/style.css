@@ -68,7 +68,7 @@ body {
 }
 .menu-icon i {
   font-size: 25px;
-  color: #3d55ff;
+  color: #a1cc14;
 }
 
 header {
@@ -103,20 +103,17 @@ header nav ul li a {
   font-size: 20px;
   display: block;
   text-decoration: none;
-  background-color: #323232;
-  color: #3d55ff;
+  background-color: black;
+  color: #a1cc14;
 }
 header nav ul li a:hover {
   color: black;
-  background: #3d55ff;
+  background: #a1cc14;
 }
 header nav ul li a.active {
   color: black;
-  background: #3d55ff;
+  background: #a1cc14;
   cursor: default;
-}
-header #head #img {
-  display: none;
 }
 header #head #logo {
   max-width: 1200px;
@@ -152,7 +149,7 @@ header #head #logo .logo2 {
 
 #wrapper {
   max-width: 1200px;
-  margin: 17px auto 0 auto;
+  margin: 17px auto 15px auto;
   padding: 0 8px;
 }
 #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
@@ -169,7 +166,7 @@ header #head #logo .logo2 {
   font-size: 1.6em;
   font-family: "Kameron", serif;
   padding: 10px;
-  color: #3d55ff;
+  color: #a1cc14;
   background: black;
 }
 #wrapper h2 {
@@ -178,9 +175,40 @@ header #head #logo .logo2 {
 #wrapper h3 {
   font-size: 1.2em;
 }
+#wrapper p {
+  padding: 0 8px;
+}
+#wrapper p:first-letter {
+  font-size: 30px;
+  font-weight: 900;
+}
+#wrapper .images {
+  text-align: center;
+}
+#wrapper .images img {
+  margin: 20px auto;
+  display: block;
+  height: 128px;
+  width: 128px;
+  background: #a1cc14;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
+}
+#wrapper .images img.me {
+  width: 200px;
+  height: 200px;
+  padding-bottom: 0px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  -ms-border-radius: 75px;
+  border-radius: 75px;
+  display: none;
+}
 
 footer {
-  height: 100px;
+  height: 75px;
   background: black;
   width: 100%;
   -webkit-box-shadow: 0px -3px 5px 1px rgba(0, 0, 0, 0.2);
@@ -200,8 +228,8 @@ footer .social ul li {
 footer .social ul li a {
   text-decoration: none;
   display: block;
-  color: #3d55ff;
-  font-size: 64px;
+  color: #a1cc14;
+  font-size: 28px;
 }
 footer .social ul li a:hover {
   color: white;
@@ -209,7 +237,7 @@ footer .social ul li a:hover {
 footer .copy {
   display: block;
   color: white;
-  text-align: right;
+  text-align: center;
   font-size: .8em;
 }
 
@@ -222,19 +250,19 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -75px;
 }
 #main #root_footer {
-  height: 100px;
+  height: 75px;
 }
 
 #footer {
   clear: both;
   position: relative;
-  height: 100px;
+  height: 75px;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 600px) {
   .menu-icon {
     display: none;
   }
@@ -264,10 +292,23 @@ html, body {
     -ms-box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
     border-bottom-left-radius: 7px;
+    -webkit-border-bottom-left-radius: 7px;
+    -moz-border-bottom-left-radius: 7px;
+    -ms-border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -moz-border-bottom-right-radius: 7px;
+    -ms-border-bottom-right-radius: 7px;
+  }
+
+  #wrapper .images img {
+    display: inline-block;
   }
 }
 @media (min-width: 850px) {
+  #wrapper .clear {
+    clear: both;
+  }
   #wrapper .row {
     display: inline-block;
     -webkit-box-sizing: border-box;
@@ -278,5 +319,11 @@ html, body {
     float: left;
     padding: 0 20px;
     margin: 0;
+  }
+  #wrapper .images {
+    width: 100%;
+  }
+  #wrapper .images img.me {
+    display: inline-block;
   }
 }

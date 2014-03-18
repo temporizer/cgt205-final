@@ -2,36 +2,24 @@ $logo1: 'Nothing You Could Do', cursive;
 $logo2: 'Kameron', serif;
 $text: normal 1em/1.2em 'Nunito', sans-serif;
 
-
-$fgLink: rgba(61,85,255,1);
-$bgLink: rgba(50,50,50,1.0);
-
-$fgLink_hover: black;
-$bgLink_hover: rgba(61,85,255,1);
-
-$bgActive: rgba(61,85,255,1);
+// Nav Link colors
+$linkColor: rgba(161,204,20,1);
 $fgActive: black;
+$iconColor: rgba(161,204,20,1);
 
+// Menu link background
+// $bgLink: rgba(50,50,50,1.0);
+$bgLink: black;
+$fgLink_hover: black;
+
+// Header colors
 $headerBgColor: black;
-$iconColor: rgba(61,85,255,1);
-$iconBgColor: rgba(255,255,255,0.5);
-
 $h1fg: rgba(61,85,255,1);
 $h1bg: black;
 
 
+$green: rgba(161,204,20,1);
 
-$drkred: rgba(178,34,18,1);
-$red: rgba(255,26,0,1);
-$green: rgba(210,255,25,1);
-$ltblue: rgba(20,99,204,1);
-$blue: rgba(9,82,178,1);
-
-$orange: rgba(204,103,20,1);
-$brown: rgba(153,102,61,1);
-$red2: rgba(255,40,0,1);
-$ltgreen: rgba(64,255,122,1);
-$green2: rgba(20,204,24,1);
 
 @mixin box-sizing($style) {
 	-webkit-box-sizing: $style;
@@ -49,7 +37,14 @@ $green2: rgba(20,204,24,1);
 
 @mixin border-bottom-radius($px) {
 	border-bottom-left-radius: $px;
+	-webkit-border-bottom-left-radius: $px;
+	-moz-border-bottom-left-radius: $px;
+	-ms-border-bottom-left-radius: $px;
+
 	border-bottom-right-radius: $px;
+	-webkit-border-bottom-right-radius: $px;
+	-moz-border-bottom-right-radius: $px;
+	-ms-border-bottom-right-radius: $px;
 }
 
 @mixin box-shadow($px1, $px2, $px3, $px4, $color) {
