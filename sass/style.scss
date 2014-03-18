@@ -1,0 +1,252 @@
+@import "compass/reset";
+@import "variables";
+@import "compass/layout/sticky-footer";
+
+body {
+	font: $text;
+	min-width: 305px;
+	// position: relative;
+	// border: 1px solid black;
+}
+.menu-icon {
+	position: absolute;
+	top: 8px;
+	right: 12px;
+	// background-color: $iconBgColor;
+	padding: 5px;
+	// @include border-radius(3px);
+	cursor: pointer;
+
+	i {
+		font-size: 25px;
+		color: $iconColor;
+	}
+}
+
+header {
+	position: relative;
+	height: 49px;
+	background-color: $headerBgColor;
+	// margin-bottom: 12px;
+	@include box-shadow(0px, 3px, 5px, 1px, rgba(0,0,0,0.2));
+
+
+	nav {
+		position: absolute;
+		top: 49px;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: none;
+		width: 100%;
+		ul {
+			display: block;
+			// border-bottom: 2px solid black;
+			// padding-bottom: 100%;
+			// background-color: $bgLink;
+			
+			// display: none;
+			@include box-shadow(0px, 3px, 8px, 5px, rgba(0,0,0,0.7));
+			// border-bottom: 2px solid black;
+			li {
+				text-align: left;
+				// border: 1px solid red;
+				
+				a {
+				padding: 15px;
+				font-size: 20px;
+				display: block;
+				text-decoration: none;
+				background-color: $bgLink;
+				color: $fgLink;
+				}
+
+				a:hover {
+					color: $fgLink_hover;
+					background: $bgLink_hover;
+				}
+
+				a.active {
+					color: $fgActive;
+					background: $bgActive;
+					cursor: default;
+
+				}
+			}
+		}
+	}
+
+	#head {
+
+		#img {
+			display: none;
+
+			img {
+				
+			}
+		}
+
+		#logo {
+			// position: absolute;
+			// display: none;
+			// top: 12px;
+			// left: 13px;
+			max-width: 1200px;
+			margin: 0 auto;
+			// border: 1px solid red;
+			padding-top: 12px;
+			padding-left: 13px;
+			font-size: 1.6em;
+			
+			a {
+				text-decoration: none;
+				color: white;
+				display: inline-block;
+				// border: 1px solid red;
+			}
+
+			.logo1 a {
+				color: black;
+			}
+
+			.logo1 {
+				font-family: $logo1;
+				display: inline-block;
+				background-color: white;
+				padding: 4px 4px;
+				color: black;
+				// font-size: 1.2em;
+				// position: absolute;
+			}
+
+			.logo2 {
+				font-family: $logo2;
+				background: black;
+				color: white;
+				display: inline-block;
+				padding: 1px 4px;
+				letter-spacing: 7px;
+				margin-left: 3px;
+				// position: absolute;
+				// top: 21px;
+				// left: 30px;
+			}
+		}
+	}
+}
+
+#wrapper {
+	max-width: 1200px;
+	margin: 17px auto 0 auto;
+	padding: 0 8px;
+
+	h1, h2, h3, h4, h5, h6 { 
+		margin-bottom: 10px; 
+		@include border-radius(3px);
+	}
+	
+	section {
+		margin-bottom: 25px;
+	}
+
+	h1 { font-size: 1.6em; font-family: $logo2; padding: 10px; color: $h1fg; background: $h1bg}
+	h2 { font-size: 1.4em; }
+	h3 { font-size: 1.2em; }
+
+
+}
+footer {
+	height: 100px;
+	background: black;
+	width: 100%;
+	// margin-top: 12px;
+	// padding: 8px 0;
+	@include box-shadow(0px, -3px, 5px, 1px, rgba(0,0,0,0.2));
+
+	.social {
+		
+		ul {
+			max-width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				margin: 8px 15px;
+				// border: 1px solid blue;
+
+				a {
+					text-decoration: none;
+					display: block;
+					color: $fgLink;
+					font-size: 64px;
+					// background: $bgLink;
+				}
+				a:hover {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.copy {
+		display: block;
+		color: white;
+		text-align: right;
+		// padding: 5px;
+		font-size: .8em;
+	}
+}
+
+
+@include sticky-footer(100px, "#main", "#root_footer", "#footer");
+
+@media (min-width: 680px ) {
+	.menu-icon {
+		display: none;
+	}
+	header {
+		nav {
+			// border: 1px solid yellow;
+			position: initial;
+			display: initial;
+
+			ul {
+				float: right;
+				background-color: initial;
+				padding-bottom: initial;
+				border-bottom: none;
+				box-shadow: initial;
+
+				li {
+					display: inline-block;
+					width: initial;
+					// margin: 0 -2px;
+
+					a {
+						background: black;
+					}
+					a.active, a:hover {
+						padding-bottom: 20px;
+						@include box-shadow(0px, 3px, 3px, 1px, rgba(0,0,0,0.3));
+						@include border-bottom-radius(7px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 850px) {
+	#wrapper {
+		.row {
+			display: inline-block;
+			@include box-sizing(border-box);
+			width: 50%;
+			float: left;
+			padding: 0 20px;
+			margin: 0;
+
+		}
+
+	}
+}
